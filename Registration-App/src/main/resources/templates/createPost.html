@@ -1,0 +1,14 @@
+<!-- searchForm.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Post</title>
+</head>
+<body>
+    <form action="/search" method="post">
+        <label for="postId">Enter Post ID:</label>
+        <input type="text" id="postId" name="PostId" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

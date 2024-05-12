@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incognito insights</title>
+    <style>
+        body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 1000px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+        input[type="text"],
+        textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #f535aa;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #f535aa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Write Your Blog</h1>
+        <form th:action="@{/s1}" th:object="${user}" method="post">
+            <input type="text" name="title" placeholder="Enter Title" required>
+            <textarea name="information" placeholder="Write your content here" rows="10" required></textarea>
+            <input type="submit" value="Save Blog">
+            <a href="sabiha" class="btn">Next</a>
+        </form>
+    </div>
+</body>
+
+</html>
+

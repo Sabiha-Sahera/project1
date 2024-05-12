@@ -1,0 +1,14 @@
+File name : display.html
+<!-- postDisplay.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Post Display</title>
+</head>
+<body>
+            <div th:each="post : ${Post}" class="post">
+        <h1 th:text="${post.title}"></h1>
+        <p th:text="${post.information}"></p>
+    </div>
+</body>
+</html>
